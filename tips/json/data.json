@@ -1,0 +1,409 @@
+{
+    "status": 200,
+    "results": [
+        {
+            "id": 1,
+            "tip": " Strive for at least 150 minutes of exercise per week"
+        },
+        {
+            "id": 2,
+            "tip": " Cut your coffee calories"
+        },
+        {
+            "id": 3,
+            "tip": " Keep a fitness journal"
+        },
+        {
+            "id": 4,
+            "tip": " Pay attention to your thoughts"
+        },
+        {
+            "id": 5,
+            "tip": " Eat the rainbow"
+        },
+        {
+            "id": 6,
+            "tip": " Avoid processed foods"
+        },
+        {
+            "id": 7,
+            "tip": " Make sure you drink water"
+        },
+        {
+            "id": 8,
+            "tip": " Protein up"
+        },
+        {
+            "id": 9,
+            "tip": " Find your \u201cwhy\u201d"
+        },
+        {
+            "id": 10,
+            "tip": " Do workouts you enjoy"
+        },
+        {
+            "id": 11,
+            "tip": " Incorporate strength training"
+        },
+        {
+            "id": 12,
+            "tip": " Set perfectionism aside"
+        },
+        {
+            "id": 13,
+            "tip": " Don\u2019t DIET"
+        },
+        {
+            "id": 14,
+            "tip": " Take recovery days"
+        },
+        {
+            "id": 15,
+            "tip": " Keep healthy snacks on hand"
+        },
+        {
+            "id": 16,
+            "tip": " Follow the 80/20 rule"
+        },
+        {
+            "id": 17,
+            "tip": " Shop the perimeter of your grocery store"
+        },
+        {
+            "id": 18,
+            "tip": " Don\u2019t just focus on the scale"
+        },
+        {
+            "id": 19,
+            "tip": " Get an accountability partner"
+        },
+        {
+            "id": 20,
+            "tip": " Try working out in the morning"
+        },
+        {
+            "id": 21,
+            "tip": " Display your results"
+        },
+        {
+            "id": 22,
+            "tip": " Track your workout schedule"
+        },
+        {
+            "id": 23,
+            "tip": " Build muscle"
+        },
+        {
+            "id": 24,
+            "tip": " Two pounds at a time"
+        },
+        {
+            "id": 25,
+            "tip": " Eat smaller portions"
+        },
+        {
+            "id": 26,
+            "tip": " Use gym wear as motivation"
+        },
+        {
+            "id": 27,
+            "tip": " Eat slowly"
+        },
+        {
+            "id": 28,
+            "tip": " Treat yourself"
+        },
+        {
+            "id": 29,
+            "tip": " Make a list of positive affirmations"
+        },
+        {
+            "id": 30,
+            "tip": " Don\u2019t beat yourself up"
+        },
+        {
+            "id": 31,
+            "tip": " Make fitness a top priority"
+        },
+        {
+            "id": 32,
+            "tip": " Swap a bad decision with a good one"
+        },
+        {
+            "id": 33,
+            "tip": " Don\u2019t skip multiple workouts"
+        },
+        {
+            "id": 34,
+            "tip": " Eat mindfully"
+        },
+        {
+            "id": 35,
+            "tip": " Just keep going"
+        },
+        {
+            "id": 36,
+            "tip": " Create measurable goals you can check off"
+        },
+        {
+            "id": 37,
+            "tip": " Don\u2019t stuff yourself"
+        },
+        {
+            "id": 38,
+            "tip": " Make an irritation list"
+        },
+        {
+            "id": 39,
+            "tip": " Try a standing desk"
+        },
+        {
+            "id": 40,
+            "tip": " Drink tea"
+        },
+        {
+            "id": 41,
+            "tip": " Set rules that work for you"
+        },
+        {
+            "id": 42,
+            "tip": " Make a habit list"
+        },
+        {
+            "id": 43,
+            "tip": " Invest in a water bottle"
+        },
+        {
+            "id": 44,
+            "tip": " Push your limits (or try a personal trainer)"
+        },
+        {
+            "id": 45,
+            "tip": " Burn more calories than you eat"
+        },
+        {
+            "id": 46,
+            "tip": " Use a foam roller"
+        },
+        {
+            "id": 47,
+            "tip": " Read others\u2019 success stories as motivation"
+        },
+        {
+            "id": 48,
+            "tip": " Do HIIT"
+        },
+        {
+            "id": 49,
+            "tip": " Track your calories"
+        },
+        {
+            "id": 50,
+            "tip": " Make movement part of your life"
+        },
+        {
+            "id": 51,
+            "tip": " View each day as a clean slate"
+        },
+        {
+            "id": 52,
+            "tip": " Trade soda for sparkling water"
+        },
+        {
+            "id": 53,
+            "tip": " Ditch comparisons"
+        },
+        {
+            "id": 54,
+            "tip": " Try yoga"
+        },
+        {
+            "id": 55,
+            "tip": " Get enough sleep"
+        },
+        {
+            "id": 56,
+            "tip": " Listen to music that motivates"
+        },
+        {
+            "id": 57,
+            "tip": " Indulge in small portions"
+        },
+        {
+            "id": 58,
+            "tip": " Use the right footwear"
+        },
+        {
+            "id": 59,
+            "tip": " Don\u2019t be afraid of fat"
+        },
+        {
+            "id": 60,
+            "tip": " Opt for circuit training"
+        },
+        {
+            "id": 61,
+            "tip": " Eat more greens"
+        },
+        {
+            "id": 62,
+            "tip": " Never dine at your desk"
+        },
+        {
+            "id": 63,
+            "tip": " Don\u2019t forget to warm-up"
+        },
+        {
+            "id": 64,
+            "tip": " Cook at home as much as you can"
+        },
+        {
+            "id": 65,
+            "tip": " Get your five servings"
+        },
+        {
+            "id": 66,
+            "tip": " Be consistent"
+        },
+        {
+            "id": 67,
+            "tip": " Follow your favorite fitness gurus"
+        },
+        {
+            "id": 68,
+            "tip": " Try a fitness app"
+        },
+        {
+            "id": 69,
+            "tip": " Plan ahead"
+        },
+        {
+            "id": 70,
+            "tip": " Snack on popcorn"
+        },
+        {
+            "id": 71,
+            "tip": " Use races as motivation"
+        },
+        {
+            "id": 72,
+            "tip": " Stretch, stretch, stretch"
+        },
+        {
+            "id": 73,
+            "tip": " Ramp it up slowly"
+        },
+        {
+            "id": 74,
+            "tip": " Work out at home"
+        },
+        {
+            "id": 75,
+            "tip": " Beware of fitness fads"
+        },
+        {
+            "id": 76,
+            "tip": " Be prepared in the morning"
+        },
+        {
+            "id": 77,
+            "tip": " Drink lemon water"
+        },
+        {
+            "id": 78,
+            "tip": " Think of workouts like appointments"
+        },
+        {
+            "id": 79,
+            "tip": " Keep alcohol to a minimum"
+        },
+        {
+            "id": 80,
+            "tip": " Make a green smoothie for breakfast"
+        },
+        {
+            "id": 81,
+            "tip": " Don\u2019t get too stuck in a routine"
+        },
+        {
+            "id": 82,
+            "tip": " Pay attention to serving sizes on labels"
+        },
+        {
+            "id": 83,
+            "tip": " Interval train"
+        },
+        {
+            "id": 84,
+            "tip": " Swap ice cream for Greek yogurt"
+        },
+        {
+            "id": 85,
+            "tip": " Be patient with weight loss"
+        },
+        {
+            "id": 86,
+            "tip": " Don\u2019t go to parties hungry"
+        },
+        {
+            "id": 87,
+            "tip": " Try a fitness tracker"
+        },
+        {
+            "id": 88,
+            "tip": " Snack-prep for busy schedules"
+        },
+        {
+            "id": 89,
+            "tip": " Treat your injuries correctly"
+        },
+        {
+            "id": 90,
+            "tip": " Realize diet and exercise are intertwined"
+        },
+        {
+            "id": 91,
+            "tip": " Use exercise to boost your mood"
+        },
+        {
+            "id": 92,
+            "tip": " Stick with your budget"
+        },
+        {
+            "id": 93,
+            "tip": " Be aware of your triggers"
+        },
+        {
+            "id": 94,
+            "tip": " Cross-train"
+        },
+        {
+            "id": 95,
+            "tip": " Prep hard-boiled eggs"
+        },
+        {
+            "id": 96,
+            "tip": " Keep healthy snacks everywhere"
+        },
+        {
+            "id": 97,
+            "tip": " Develop a positive attitude"
+        },
+        {
+            "id": 98,
+            "tip": " Meditate"
+        },
+        {
+            "id": 99,
+            "tip": " Reduce stress"
+        },
+        {
+            "id": 100,
+            "tip": " Take your vitamins"
+        },
+        {
+            "id": 101,
+            "tip": " Practice self-love"
+        }
+    ]
+}

@@ -1,2 +1,8 @@
-# Virtual environment
+# virtual environment
 venv
+
+# tmp folder
+tmp
+
+# vscode setting
+.vscode
