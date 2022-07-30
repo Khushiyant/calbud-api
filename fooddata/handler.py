@@ -26,7 +26,7 @@ class handler:
             self.processed_data["image"] = raw_data['food']["image"]
             return self.processed_data
         except Exception as e:
-            return {"error":str(e)}
+            return {"status":400,"error":str(e)}
 
 if __name__ == "__main__":
     from os import getenv
