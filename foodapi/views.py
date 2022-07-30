@@ -10,5 +10,5 @@ APP_KEY = os.getenv("APP_KEY")
 
 @api_view(['GET'])
 def food(request, ingr):
-    data = handler.handler(APP_ID, APP_KEY, ingr)
+    data = handler.handler(APP_ID, APP_KEY, ingr).get_data()
     return Response(data)
