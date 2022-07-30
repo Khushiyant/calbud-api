@@ -1,9 +1,14 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+import os
+
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-import json
+
+from fooddata import handler
+
+APP_ID = os.getenv("APP_ID")
+APP_KEY = os.getenv("APP_KEY")
 
 @api_view(['GET'])
-def food(request):
-    return Response({"status":"test"})
+def food(request, ingr):
+    data = handler.handler(APP_ID, APP_KEY, ingr)
+    return Response(data)
