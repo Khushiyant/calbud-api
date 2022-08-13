@@ -1,7 +1,7 @@
-from nturl2path import url2pathname
+from .views import RegisterAPI, LoginAPI, UserAPI, LogoutAPI
 from django.urls import path
-from . import views
 
 urlpatterns = [
-    path('login/',views.login,  name='login'),
+    path('api/register/', RegisterAPI.as_view(), name='register'),
+    path('api/login/', LoginAPI.as_view(), name='login')
 ]
