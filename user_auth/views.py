@@ -36,3 +36,11 @@ class RegisterAPI(generics.GenericAPIView):
                 "token": AuthToken.objects.create(user)[1],
             }
         )
+
+# Logout API
+class LogoutAPI(generics.GenericAPIView):
+    permission_classes = (permissions.IsAuthenticated,)
+
+    def post(self, request, format=None):
+        request.user.auth_token.delete()
+        return Response(status=204)
