@@ -1,9 +1,12 @@
 # virtual environment
 venv
-.env
+*.env
 
 # tmp folder
 tmp
 
 # vscode setting
 .vscode
+
+# SQLite
+db.sqlite3
