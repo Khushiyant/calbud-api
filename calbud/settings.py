@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     "rest_framework",
     "knox",
     "tips",
-    "foodapi",
+    "foodapi",,
+    "cards"
 ]
 
 MIDDLEWARE = [
