@@ -1,3 +1,6 @@
 from django.db import models
+from base.models import UserAccount
 
-# Create your models here.
+
+class NutrientProfile(models.Model):
+    pass
