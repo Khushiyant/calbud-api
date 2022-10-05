@@ -10,3 +10,9 @@ tmp
 
 # SQLite
 db.sqlite3
+
+# pyc files
+*.pyc
+
+# DS_Store
+.DS_Store
