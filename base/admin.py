@@ -1,7 +1,4 @@
 from django.contrib import admin
-from .models import UserAccount, PremiumUserAccount
-
-# Register your models here.
+from .models import UserAccount
 
 admin.register(UserAccount)
-admin.register(PremiumUserAccount)
