@@ -44,6 +44,7 @@ class UserAccountManager(BaseUserManager):
 class UserAccount(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
+    dob = models.DateTimeField(required=True)
     email = models.EmailField(verbose_name="email address", max_length=255, unique=True)
     profile_image = models.URLField(max_length=300, null=True, blank=True)
     phone = models.CharField(max_length=15, null=True, blank=True)
@@ -70,3 +71,8 @@ class UserAccount(models.Model):
 
     def __str__(self) -> str:
         return self.email
+
+class FoodProfile(models.Model):
+    name = models.CharField(max_length=255)
+    
+    
