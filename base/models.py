@@ -44,7 +44,9 @@ class UserAccountManager(BaseUserManager):
 class UserAccount(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
-    dob = models.DateTimeField(required=True)
+    weight = models.IntegerField()
+    height = models.IntegerField()
+    date_of_birth = models.DateField()
     email = models.EmailField(verbose_name="email address", max_length=255, unique=True)
     profile_image = models.URLField(max_length=300, null=True, blank=True)
     phone = models.CharField(max_length=15, null=True, blank=True)
@@ -72,7 +74,40 @@ class UserAccount(models.Model):
     def __str__(self) -> str:
         return self.email
 
+
 class FoodProfile(models.Model):
     name = models.CharField(max_length=255)
+    image = models.URLField(max_length=300, null=True, blank=True)
+    kcal = models.IntegerField()
+    protein = models.FloatField()
+    fat = models.FloatField()
+    carbs = models.FloatField()
+    fiber = models.FloatField()
+
+    # audit fields
+    created_at = models.DateTimeField(default=timezone.now)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self) -> str:
+        return self.name
     
+    def get_name(self):
+        return self.name
+
+class PerDayProfile(models.Model):
+    user = models.ForeignKey(UserAccount, on_delete=models.CASCADE)
+    food = models.ForeignKey(FoodProfile, on_delete=models.CASCADE)
+    date = models.DateField()
+
+    # audit fields
+    created_at = models.DateTimeField(default=timezone.now)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self) -> str:
+        return f"{self.user} {self.food} {self.date}"
+
+    def get_name(self):
+        return f"{self.user} {self.food} {self.date}"
+
+
     
