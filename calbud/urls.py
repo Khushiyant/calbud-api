@@ -20,6 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('tips.urls')),
     path('', include('foodapi.urls')),
+    path('', include('base.urls')),
     # path('api/', include('user_auth.urls')),
     # path('api/auth/', include('knox.urls'))
 

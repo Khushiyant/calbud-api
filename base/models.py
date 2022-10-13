@@ -5,13 +5,14 @@ from django.utils import timezone
 
 
 class UserAccountManager(BaseUserManager):
-    def create_user(self, email, name, password=None, phone=None, profile_image=None):
+    def create_user(self, email, first_name, last_name,password=None, phone=None, profile_image=None):
         if not email:
             raise ValueError("Users must have an email address")
 
         user = self.model(
             email=self.normalize_email(email),
-            name=name,
+            first_name=first_name,
+            last_name=last_name,
             phone=phone,
             profile_image=profile_image,
         )
@@ -21,7 +22,7 @@ class UserAccountManager(BaseUserManager):
         return user
 
     def create_superuser(
-        self, email, name, password=None, phone=None, profile_image=None
+        self, email, first_name, last_name, password=None, phone=None, profile_image=None
     ):
         if not email:
             raise ValueError("Users must have an email address")
@@ -29,7 +30,8 @@ class UserAccountManager(BaseUserManager):
         user = self.create_user(
             email=self.normalize_email(email),
             password=password,
-            name=name,
+            first_name=first_name,
+            last_name=last_name,
             phone=phone,
             profile_image=profile_image,
         )
@@ -41,11 +43,10 @@ class UserAccountManager(BaseUserManager):
         return user
 
 
-class UserAccount(models.Model):
+class UserAccount(AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     weight = models.IntegerField(null=True)
-    height = models.IntegerField(null=True)
     date_of_birth = models.DateField(null=True)
     email = models.EmailField(verbose_name="email address", max_length=255, unique=True)
     profile_image = models.URLField(max_length=300, null=True, blank=True)

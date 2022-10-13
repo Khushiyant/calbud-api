@@ -1,3 +1,46 @@
 from django.shortcuts import render
+from rest_framework import status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework_simplejwt.tokens import RefreshToken
 
-# Create your views here.
+from .email_handler import EmailHandler
+from .serializers import (
+    UserLoginSerializer,
+    UserProfileSerializer,
+    UserRegistrationSerializer,
+)
+
+
+def get_tokens_for_user(user):
+    refresh = RefreshToken.for_user(user)
+
+    return {
+        "refresh": str(refresh),
+        "access": str(refresh.access_token),
+    }
+
+
+@api_view(["POST"])
+def register(request):
+    data = request.data
+    serializer = UserRegistrationSerializer(data=data)
+    serializer.is_valid(raise_exception=True)
+    user = serializer.save()
+    if user.user_type == "INDIVIDUAL":
+        user.is_registeration_complete = True
+        user.save()
+    token = get_tokens_for_user(user)
+    try:
+        email = EmailHandler(
+            "Welcome to the community",
+            "Welcome to the community, hoping for successful journey with you",
+            [data["email"]],
+        )
+        email.send()
+    except Exception as e:
+        print("Connection refused")
+    return Response(
+        {"token": token, "message": "Registration Successful"},
+        status=status.HTTP_201_CREATED,
+    )
