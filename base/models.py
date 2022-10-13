@@ -44,9 +44,9 @@ class UserAccountManager(BaseUserManager):
 class UserAccount(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
-    weight = models.IntegerField()
-    height = models.IntegerField()
-    date_of_birth = models.DateField()
+    weight = models.IntegerField(null=True)
+    height = models.IntegerField(null=True)
+    date_of_birth = models.DateField(null=True)
     email = models.EmailField(verbose_name="email address", max_length=255, unique=True)
     profile_image = models.URLField(max_length=300, null=True, blank=True)
     phone = models.CharField(max_length=15, null=True, blank=True)
@@ -58,7 +58,7 @@ class UserAccount(models.Model):
     objects = UserAccountManager()
 
     USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = ["first_name", "email"]
+    REQUIRED_FIELDS = ["first_name", "last_name"]
 
     # audit fields
     created_at = models.DateTimeField(default=timezone.now)
