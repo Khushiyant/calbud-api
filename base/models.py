@@ -37,7 +37,6 @@ class UserAccountManager(BaseUserManager):
         )
 
         user.is_superuser = True
-        user.is_staff = True
 
         user.save(using=self._db)
         return user
@@ -48,13 +47,11 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
     last_name = models.CharField(max_length=255)
     weight = models.IntegerField(null=True)
     date_of_birth = models.DateField(null=True)
-    email = models.EmailField(verbose_name="email address", max_length=255, unique=True)
+    email = models.EmailField(max_length=255, unique=True)
     profile_image = models.URLField(max_length=300, null=True, blank=True)
     phone = models.CharField(max_length=15, null=True, blank=True)
     premium_at = models.DateTimeField(null=True, blank=True)
-
     is_active = models.BooleanField(default=True)
-    is_admin = models.BooleanField(default=False)
 
     objects = UserAccountManager()
 

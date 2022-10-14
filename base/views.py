@@ -27,9 +27,6 @@ def register(request):
     serializer = UserRegistrationSerializer(data=data)
     serializer.is_valid(raise_exception=True)
     user = serializer.save()
-    if user.user_type == "INDIVIDUAL":
-        user.is_registeration_complete = True
-        user.save()
     token = get_tokens_for_user(user)
     try:
         email = EmailHandler(
