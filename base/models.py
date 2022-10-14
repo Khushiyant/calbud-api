@@ -5,14 +5,13 @@ from django.utils import timezone
 
 
 class UserAccountManager(BaseUserManager):
-    def create_user(self, email, first_name, last_name,password=None, phone=None, profile_image=None):
+    def create_user(self, email, name,password=None, phone=None, profile_image=None):
         if not email:
             raise ValueError("Users must have an email address")
 
         user = self.model(
             email=self.normalize_email(email),
-            first_name=first_name,
-            last_name=last_name,
+            name=name,
             phone=phone,
             profile_image=profile_image,
         )
@@ -22,7 +21,7 @@ class UserAccountManager(BaseUserManager):
         return user
 
     def create_superuser(
-        self, email, first_name, last_name, password=None, phone=None, profile_image=None
+        self, email, name, password=None, phone=None, profile_image=None
     ):
         if not email:
             raise ValueError("Users must have an email address")
@@ -30,8 +29,7 @@ class UserAccountManager(BaseUserManager):
         user = self.create_user(
             email=self.normalize_email(email),
             password=password,
-            first_name=first_name,
-            last_name=last_name,
+            name=name,
             phone=phone,
             profile_image=profile_image,
         )
@@ -43,8 +41,7 @@ class UserAccountManager(BaseUserManager):
 
 
 class UserAccount(AbstractBaseUser, PermissionsMixin):
-    first_name = models.CharField(max_length=255)
-    last_name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
     weight = models.IntegerField(null=True)
     date_of_birth = models.DateField(null=True)
     email = models.EmailField(max_length=255, unique=True)
@@ -56,7 +53,7 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
     objects = UserAccountManager()
 
     USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = ["first_name", "last_name"]
+    REQUIRED_FIELDS = ["name"]
 
     # audit fields
     created_at = models.DateTimeField(default=timezone.now)
