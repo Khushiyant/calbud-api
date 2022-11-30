@@ -5,11 +5,8 @@ from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
 
 from .email_handler import EmailHandler
-from .serializers import (
-    UserLoginSerializer,
-    UserProfileSerializer,
-    UserRegistrationSerializer,
-)
+from .serializers import (UserLoginSerializer, UserProfileSerializer,
+                          UserRegistrationSerializer)
 
 
 def get_tokens_for_user(user):
@@ -21,6 +18,7 @@ def get_tokens_for_user(user):
     }
 
 
+# Registration view
 @api_view(["POST"])
 def register(request):
     data = request.data
@@ -41,3 +39,14 @@ def register(request):
         {"token": token, "message": "Registration Successful"},
         status=status.HTTP_201_CREATED,
     )
+
+
+# Login view for user
+@api_view(["POST"])
+def login(request):
+    data = request.data
+    serializer = UserLoginSerializer(data=data)
+    serializer.is_valid(raise_exception=True)
+    user = serializer.validated_data
+    token = get_tokens_for_user(user)
+    return Response({"token": token, "message": "Login Successful"})

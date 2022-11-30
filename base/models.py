@@ -49,6 +49,8 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
     phone = models.CharField(max_length=15, null=True, blank=True)
     premium_at = models.DateTimeField(null=True, blank=True)
     is_active = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=False)
+    is_admin = models.BooleanField(default=False)
 
     objects = UserAccountManager()
 
