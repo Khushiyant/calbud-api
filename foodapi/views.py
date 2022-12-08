@@ -7,8 +7,8 @@ from rest_framework.response import Response
 from .fooddata import handler
 
 
-def config():
-    dotenv.load_dotenv()
+# load environment variables
+dotenv.load_dotenv()
 
 
 APP_ID = os.getenv("APP_ID")
